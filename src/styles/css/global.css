@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,400;1,700;1,900&display=swap");
+:root {
+  --color: #232323;
+  --background: #c3ffea;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  color: var(--color);
+  background-color: var(--background);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  margin: 0 5% !important;
+}
+/*# sourceMappingURL=global.css.map */
