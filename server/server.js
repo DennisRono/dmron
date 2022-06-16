@@ -9,6 +9,8 @@ const mongoose = require('mongoose')
 const conn = require('./db/conn')
 const options = require('./config/corsOptions')
 
+//connect to mongoDb
+
 app.use(cors(options))
 app.use(morgan('combined'))
 app.use(bodyParser.json())
