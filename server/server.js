@@ -11,10 +11,13 @@ const options = require('./config/corsOptions')
 
 //connect to mongoDb
 
+
 app.use(cors(options))
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 
 
-
-app.listen(PORT, () => {console.log(`server is running on port ${PORT}`)})
+mongoose.connection.once('open', ()=>{
+    console.log('Connected to MongoDB')
+    app.listen(PORT, () => {console.log(`server is running on port ${PORT}`)})
+})
