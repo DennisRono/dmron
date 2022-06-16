@@ -1,5 +1,7 @@
 const express = require('express')
-var cors = require('cors')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const morgan = require('morgan')
 const PORT = process.env.PORT||8000
 const app = express()
 
@@ -15,5 +17,9 @@ var options = {
 }
 
 app.use(cors(options))
+app.use(morgan('combined'))
+app.use(bodyParser.json())
+
+
 
 app.listen(PORT, () => {console.log(`server is running on port ${PORT}`)})

@@ -1,0 +1,2 @@
+DATABASE_NAME=yourdatabasename
+CONNECTION_URL=mongodb+srv://yourname:yourpassword@cluster0.57jak.mongodb.net/yourdatabasename?retryWrites=true&w=majority
