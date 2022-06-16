@@ -13,3 +13,5 @@ currently being supported with security updates.
 | < 4.0   | :x:                |
 
 ## Reporting a Vulnerability
+
+Open an issue to report a vulnerability or a bug
