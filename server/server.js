@@ -1,22 +1,12 @@
 require('dotenv').config()
 const express = require('express')
+const app = express()
+const PORT = process.env.PORT||8000
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
-const PORT = process.env.PORT||8000
-const app = express()
-
-var whitelist = ['https://dmron.nullchemy.com', 'http://localhost:3000']
-var options = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-}
+const options = require('./config/corsOptions')
 
 app.use(cors(options))
 app.use(morgan('combined'))
