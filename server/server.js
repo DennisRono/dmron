@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
+const conn = require('./db/conn')
 const options = require('./config/corsOptions')
 
 app.use(cors(options))
