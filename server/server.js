@@ -10,11 +10,18 @@ const conn = require('./db/conn')
 const options = require('./config/corsOptions')
 
 //connect to mongoDb
+conn()
 
+//routes
+const authRoute = require('./routes/auth');
 
+//middlewares
 app.use(cors(options))
 app.use(morgan('combined'))
 app.use(bodyParser.json())
+
+
+app.use('/auth', authRoute);
 
 
 mongoose.connection.once('open', ()=>{
