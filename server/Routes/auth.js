@@ -34,11 +34,11 @@ router.post('/register', async (req, res, next) => {
                         email: 'dennis@gmail.com',
                         ID: userID
                     })
+                    //save user to database
                     await mem.save()
                 } catch (err) { res.status(500).send(err); }
             });
         });
-        //save user to database
     } catch (error) {
         if (error.isJoi === true) {
             res.status(422).send(error.details[0].message);
