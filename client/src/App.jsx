@@ -19,6 +19,7 @@ const App = () => {
   }, [])
   return (
     <Fragment>
+      <div>{time}</div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
