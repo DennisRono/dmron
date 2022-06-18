@@ -15,11 +15,12 @@ const conn = async () => {
 //create database if it does not exist
 mongoose.connection.once('open', function() {
     new Admin(mongoose.connection.db).listDatabases(function(err, result) {
-        result.databases.map(
-            i => {
-                console.log(i.name);
-            }
-        )
+        let exists = result.databases.filter(function (o) {
+            return o.hasOwnProperty(process.env.DATABASE_NAME);
+        }).length > 0;
+        if (!exists) {
+            console.log('Creating database...');
+        }
     });
 });
 
