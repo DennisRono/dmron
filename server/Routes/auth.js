@@ -13,4 +13,8 @@ router.post('/register', (req, res, next) => {
     res.json({msg:"hurray"})
 })
 
+router.post('/login', (req, res, next) => {
+    res.json({msg:"hurray"})
+})
+
 module.exports = router
