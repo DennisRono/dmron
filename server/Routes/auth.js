@@ -18,8 +18,8 @@ router.post('/register', async (req, res, next) => {
         const validate = await registerDataSchema.validateAsync(req.body);
         console.log(validate);
         //check if user is already registered
-        const User = user.exists({"email": validate.email});
-        if (User) return res.status(400).json({ msg: "User already registered" });
+        const User = await user.exists({"email": validate.email});
+        if (User.length > 0) return res.status(400).json({ msg: "User already registered" });
         //hash password
         bcrypt.genSalt(10, (err, salt) => {
             if (err) {
@@ -36,7 +36,7 @@ router.post('/register', async (req, res, next) => {
                         ID: userID
                     })
                     //save user to database
-                    //await mem.save()
+                    await mem.save()
                 } catch (err) { res.status(500).send(err); }
             });
         });
