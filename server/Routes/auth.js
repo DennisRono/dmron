@@ -17,11 +17,12 @@ router.post('/register', async (req, res, next) => {
     try {
         //const validate = await registerDataSchema.validateAsync(req.body);
         //check if user is already registered
-        const mem = new user({email: 'dennis@gmail.com'})
-        await mem.save()
-        console.log(mem)
-        const User = await user.findOne({email: "dennis@gmail.com"});
-        console.log(User);
+        // const mem = new user({email: 'dennis@gmail.com'})
+        // await mem.save()
+        // console.log(mem)
+        user.findOne({email: "dennis@gmail.com"}, (err, User) => {
+            if (User) return res.status(400).json({ msg: "User already registered" });
+        });
         //hash password
         //save user to database
     } catch (error) {
