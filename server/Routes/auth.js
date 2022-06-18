@@ -20,11 +20,11 @@ router.post('/register', async (req, res, next) => {
         const User = user.findOne({email: "dennis@gmail.com"});
         if (User) return res.status(400).json({ msg: "User already registered" });
         //hash password
-        bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.genSalt(10, async (err, salt) => {
             if (err) {
                 return res.status(422).send(err.message);
             }
-            bcrypt.hash(validate.password, salt, (err, hash) => {
+            bcrypt.hash(validate.password, salt, async (err, hash) => {
                 if (err) {
                     return res.status(422).send(err.message);
                 }
