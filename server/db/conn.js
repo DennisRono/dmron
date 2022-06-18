@@ -16,7 +16,7 @@ const conn = async () => {
 mongoose.connection.once('open', function() {
     new Admin(mongoose.connection.db).listDatabases(function(err, result) {
         let exists = result.databases.filter(function (o) {
-            return o.hasOwnProperty(process.env.DATABASE_NAME);
+            return o.hasOwnProperty('dmron');
         }).length > 0;
         if (!exists) {
             console.log('Creating database...');
