@@ -21,6 +21,7 @@ io.on('connection', (socket) => {
 })
 
 //routes
+const homeRoute = require('./routes/home');
 const authRoute = require('./routes/auth');
 
 //middlewares
@@ -29,6 +30,7 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 
 
+app.use('/', homeRoute);
 app.use('/auth', authRoute);
 
 
