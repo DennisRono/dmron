@@ -32,7 +32,7 @@ router.post('/register', async (req, res, next) => {
                 let userID = (new Date()).getTime().toString(36) + Math.random().toString(36).slice(2);
                 try {
                     const mem = new user({
-                        email: 'dennis@gmail.com',
+                        email: validate.email,
                         ID: userID
                     })
                     //save user to database
