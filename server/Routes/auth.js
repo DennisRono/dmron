@@ -30,14 +30,13 @@ router.post('/register', async (req, res, next) => {
                 }
                 let userID = (new Date()).getTime().toString(36) + Math.random().toString(36).slice(2);
                 try {
-                    const mem = new user({
+                    //save user to database
+                    await user.create({
                         ID: userID,
                         email: validate.email,
                         phone: validate.phone,
                         password: hash
-                    })
-                    //save user to database
-                    await mem.save()
+                    })                    
                     res.json({'msg': 'success'})
                 } catch (err) { res.status(500).send(err); }
             });
