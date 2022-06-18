@@ -17,25 +17,8 @@ router.post('/register', async (req, res, next) => {
     try {
         //const validate = await registerDataSchema.validateAsync(req.body);
         //check if user is already registered
-        user.findOne({email: "dennis@gmail.com"}, async (err, User) => {
-            if (User) return res.status(400).json({ msg: "User already registered" });
-            bcrypt.genSalt(10, (err, salt) => {
-                if (err) {
-                    return res.status(422).send(err.message);
-                }
-                bcrypt.hash(validate.password, salt, (err, hash) => {
-                    if (err) {
-                        return res.status(422).send(err.message);
-                    }
-                    let userID = (new Date()).getTime().toString(36) + Math.random().toString(36).slice(2);
-                    try {
-                        const mem = new user({email: 'dennis@gmail.com', ID: userID})
-                        await mem.save()
-                        console.log(mem)
-                    } catch (err) { res.status(500).send(err); }
-                });
-            });
-        });
+        const User = user.findOne({email: "dennis@gmail.com"});
+        if (User) return res.status(400).json({ msg: "User already registered" });
         //hash password
         //save user to database
     } catch (error) {
