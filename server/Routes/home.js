@@ -4,4 +4,8 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
     res.json({'msg': 'welcome to Dmron'})
 })
+router.post('/', (req, res, next) => {
+    res.json({'msg': 'welcome to Dmron'})
+})
+
 module.exports = router;
