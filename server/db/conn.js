@@ -14,7 +14,6 @@ const conn = async () => {
 mongoose.connection.once('open', function() {
     // conn established
     new Admin(conn.db).listDatabases(function(err, result) {
-        console.log('listDatabases succeeded'); 
         console.log(result);
     });
 });
