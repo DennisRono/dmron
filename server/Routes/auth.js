@@ -20,6 +20,24 @@ router.post('/register', async (req, res, next) => {
         const User = user.findOne({email: "dennis@gmail.com"});
         if (User) return res.status(400).json({ msg: "User already registered" });
         //hash password
+        bcrypt.genSalt(10, (err, salt) => {
+            if (err) {
+                return res.status(422).send(err.message);
+            }
+            bcrypt.hash(validate.password, salt, (err, hash) => {
+                if (err) {
+                    return res.status(422).send(err.message);
+                }
+                let userID = (new Date()).getTime().toString(36) + Math.random().toString(36).slice(2);
+                try {
+                    const mem = new user({
+                        email: 'dennis@gmail.com',
+                        ID: userID
+                    })
+                    await mem.save()
+                } catch (err) { res.status(500).send(err); }
+            });
+        });
         //save user to database
     } catch (error) {
         if (error.isJoi === true) {
