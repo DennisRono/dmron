@@ -18,6 +18,8 @@ router.post('/register', async (req, res, next) => {
         const validate = await registerDataSchema.validateAsync(req.body);
         //check if user is already registered
         const mem = new user({email: 'dennis@denniskibet.com'})
+        await mem.save()
+        console.log(mem)
         const User = await user.findOne({email: validate.email});
         console.log(User);
         //hash password
