@@ -16,9 +16,12 @@ router.post('/', (req, res) => {
 router.post('/register', async (req, res, next) => {
     try {
         const validate = await registerDataSchema.validateAsync(req.body);
-        //check if user is already registered
+        //check if email is already registered
         const User = await user.exists({"email": validate.email});
-        if (User) return res.status(400).json({ msg: "User already registered" });
+        if (User) return res.status(400).json({ msg: "email already in use please login" });
+        //check if number is already in use
+        const phoneNumber = await user.exists({"email": validate.email});
+        if (phoneNumber) return res.status(400).json({ msg: "phone number already in use" });
         //hash password
         bcrypt.genSalt(10, (err, salt) => {
             if (err) {
