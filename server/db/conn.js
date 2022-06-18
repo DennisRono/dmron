@@ -11,13 +11,11 @@ const conn = async () => {
         console.err(err)
     }
 }
-conn.on('open', function() {
+mongoose.connection.once('open', function() {
     // conn established
     new Admin(conn.db).listDatabases(function(err, result) {
-        console.log('listDatabases succeeded');
-        // database list stored in result.databases
-        var allDatabases = result.databases; 
-        console.log(allDatabases);  
+        console.log('listDatabases succeeded'); 
+        console.log(result);
     });
 });
 
