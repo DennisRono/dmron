@@ -11,8 +11,9 @@ const conn = async () => {
         console.err(err)
     }
 }
+
+//create database if it does not exist
 mongoose.connection.once('open', function() {
-    // conn established
     new Admin(mongoose.connection.db).listDatabases(function(err, result) {
         console.log(result.databases);
     });
