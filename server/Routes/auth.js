@@ -16,6 +16,7 @@ router.post('/', (req, res) => {
 router.post('/register', async (req, res, next) => {
     try {
         const validate = await registerDataSchema.validateAsync(req.body);
+        console.log(validate);
         //check if user is already registered
         const User = user.exists({"email": validate.email});
         if (User) return res.status(400).json({ msg: "User already registered" });
