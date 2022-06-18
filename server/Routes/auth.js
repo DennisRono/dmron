@@ -17,7 +17,7 @@ router.post('/register', async (req, res, next) => {
     try {
         //const validate = await registerDataSchema.validateAsync(req.body);
         //check if user is already registered
-        user.findOne({email: "dennis@gmail.com"}, (err, User) => {
+        user.findOne({email: "dennis@gmail.com"}, async (err, User) => {
             if (User) return res.status(400).json({ msg: "User already registered" });
             bcrypt.genSalt(10, (err, salt) => {
                 if (err) {
