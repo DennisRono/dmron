@@ -20,7 +20,7 @@ router.post('/register', async (req, res, next) => {
         const User = await user.exists({"email": validate.email});
         if (User) return res.status(400).json({ msg: "email already in use please login" });
         //check if number is already in use
-        const phoneNumber = await user.exists({"email": validate.email});
+        const phoneNumber = await user.exists({"phone": validate.phone});
         if (phoneNumber) return res.status(400).json({ msg: "phone number already in use" });
         //hash password
         bcrypt.genSalt(10, (err, salt) => {
