@@ -13,7 +13,7 @@ const conn = async () => {
 }
 mongoose.connection.once('open', function() {
     // conn established
-    new Admin(conn.db).listDatabases(function(err, result) {
+    new Admin(mongoose.connection.db).listDatabases(function(err, result) {
         console.log(result);
     });
 });
