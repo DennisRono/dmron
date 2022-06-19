@@ -9,7 +9,7 @@ import Contact from './routes/Contact'
 const App = () => {
   const [time, setTime] = useState('fetching')
   useEffect(() => {
-    const socket = io('http://localhost:5000')
+    const socket = io('http://localhost:8000')
     socket.on('connect', () => console.log(socket.id))
     socket.on('connect_error', () => {
       setTimeout(() => socket.connect(), 5000)
