@@ -1,0 +1,12 @@
+{
+    "last_chat": "yesterday",
+    "last_seen": "9:42am",
+    "chat_id": "56ydsred32345",
+    "chat":{
+        "to_id": "12736123",
+        "from_id": "1645376245",
+        "message_id": "478564",
+        "message": "hello from Dennis",
+        "time": "7:10am"
+    }
+}

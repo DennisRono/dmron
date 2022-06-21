@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,KAAK,EAAE,GAAG;EACV,gBAAgB,EAAE,MAAM;EACxB,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "../scss/chatarea.scss"
+    ],
+    "names": [],
+    "file": "chatarea.css"
+}

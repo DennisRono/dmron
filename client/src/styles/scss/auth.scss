@@ -1,0 +1,194 @@
+.wrapper{
+margin: 0 10%;
+    .auth{
+        .auth-play{
+            .auth-main{
+                .auth-register, .auth-login{
+                    width: 60%;
+                    height: auto;
+                    margin: 0 auto;
+                    margin-top: 3%;
+                    padding: 20px;
+                    background-color: #fff;
+                    .reg-title{
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                    .register-form{
+                        .user-input-wrp {
+                            position: relative;
+                            width: 94%;
+                            margin: 5px 0px;
+                            margin-top: 20px;
+                        }
+                        .user-input-wrp .inputText{
+                            width: 100%;
+                            outline: none;
+                            border: 1px solid rgb(211, 211, 211);
+                            padding: 10px 13px;
+                             box-shadow: none !important;
+                            border-radius: 5px;
+                            background-color: #fff;
+                            margin: 0 !important;
+                        }
+                        .focusInput{
+                            background-color: rgb(255, 219, 166) !important;
+                        }
+                        .floatlabel{
+                            top: -20px !important;
+                            left: 8px;
+                            font-size: 13px;
+                            opacity: 1;
+                        }
+                        .user-input-wrp .inputText:invalid {
+                            background-color: rgb(255, 219, 166);
+                        }
+                        .user-input-wrp .inputText:valid {
+                            background-color: rgb(204, 236, 255);
+                        }
+                        .user-input-wrp .floating-label {
+                            position: absolute;
+                            pointer-events: none;
+                            top: 10px;
+                            left: 10px;
+                            transition: 0.2s ease all;
+                            opacity: .5;
+                            color: rgb(95, 95, 95);
+                        }
+                        //.user-input-wrp .inputText:invalid ~ .floating-label,
+                        .user-input-wrp .inputText:not([value=""]) ~ .floating-label,
+                        .user-input-wrp .inputText:focus ~ .floating-label{
+                            top: -20px !important;
+                            left: 8px;
+                            font-size: 13px;
+                            opacity: 1;
+                        }
+                        .id-input{
+                            border: 2px solid #ff5b5b !important;
+                        }
+                        #id-err{
+                            font-size: 12px;
+                            color: red;
+                            margin-left: 10px;
+                        }
+                        #id-messa{
+                            font-size: 12px;
+                            color: rgb(42, 42, 42);
+                            margin-left: 10px;
+                        }
+                        #pass-err{
+                            display: flex;
+                            flex-direction: row;
+                            margin-top: 5px;
+                        }
+                        .passwarn{
+                            display: inline-block;
+                            width: 30px;
+                            height: 5px;
+                            flex-grow:1;
+                            margin: 0 10px;
+                            border-radius: 20px;
+                            background-color: #3cff87;
+                            &:nth-child(1){
+                                margin-left: 10px !important;
+                            }
+                        }
+                        .subflex{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            .register-btn{
+                                border-radius: 4px;
+                                padding: 13px 54px 15px;
+                                background-color: #2ac6ff;
+                                border: 1px solid #2ac6ff;
+                                position: relative;
+                                overflow: hidden;
+                                z-index: 1;
+                                text-align: center;
+                                line-height: 19px;
+                                cursor: pointer;
+                                font-size: 16px;
+                                font-weight: 600;
+                                letter-spacing: 1.6px;
+                                text-transform: uppercase;
+                                color: rgb(255, 255, 255);
+                                -webkit-box-align: center;
+                                align-items: center;
+                                transition: color 0.15s ease-in-out 0s;
+                                display: inline-block;
+                                &:hover{
+                                    color: rgb(109, 216, 255);
+                                    background-color: #fff;
+                                    transition: 0.3s;
+                                }
+                            }
+                            .logDirect{
+                                padding-right: 20px;
+                                p{
+                                    font-size: 0.8rem;
+                                    a{
+                                        color: #2550ff;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 638px){
+    .wrapper{
+        margin: 0 4%;
+        .auth{
+            .auth-play{
+                .auth-main{
+                    .auth-register, .auth-login{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+    .auth-login{
+        margin-top: 30% !important;
+    }
+    .subflex{
+        flex-direction: column !important;
+    }
+    .register-btn{
+        margin-bottom: 10px;
+    }
+    .inputText{
+        width: calc(100% - 13px) !important;
+    }
+}
+@media(max-width: 400px){
+    .wrapper{
+        margin: 0 40px;
+        .auth{
+            .auth-play{
+                .auth-main{
+                    .auth-register, .auth-login{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+    .subflex{
+        flex-direction: column !important;
+    }
+}
+
+//js manipulations css
+.reg-hide{
+    display: none;
+}
+.log-hide{
+    display: none;
+}

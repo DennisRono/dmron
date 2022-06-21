@@ -1,0 +1,226 @@
+.wrapper {
+  margin: 0 10%;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register, .wrapper .auth .auth-play .auth-main .auth-login {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 3%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .reg-title, .wrapper .auth .auth-play .auth-main .auth-login .reg-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .user-input-wrp, .wrapper .auth .auth-play .auth-main .auth-login .register-form .user-input-wrp {
+  position: relative;
+  width: 94%;
+  margin: 5px 0px;
+  margin-top: 20px;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .user-input-wrp .inputText, .wrapper .auth .auth-play .auth-main .auth-login .register-form .user-input-wrp .inputText {
+  width: 100%;
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 10px 13px;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 0 !important;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .focusInput, .wrapper .auth .auth-play .auth-main .auth-login .register-form .focusInput {
+  background-color: #ffdba6 !important;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .floatlabel, .wrapper .auth .auth-play .auth-main .auth-login .register-form .floatlabel {
+  top: -20px !important;
+  left: 8px;
+  font-size: 13px;
+  opacity: 1;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .user-input-wrp .inputText:invalid, .wrapper .auth .auth-play .auth-main .auth-login .register-form .user-input-wrp .inputText:invalid {
+  background-color: #ffdba6;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .user-input-wrp .inputText:valid, .wrapper .auth .auth-play .auth-main .auth-login .register-form .user-input-wrp .inputText:valid {
+  background-color: #ccecff;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .user-input-wrp .floating-label, .wrapper .auth .auth-play .auth-main .auth-login .register-form .user-input-wrp .floating-label {
+  position: absolute;
+  pointer-events: none;
+  top: 10px;
+  left: 10px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  opacity: .5;
+  color: #5f5f5f;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .user-input-wrp .inputText:not([value=""]) ~ .floating-label,
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .user-input-wrp .inputText:focus ~ .floating-label, .wrapper .auth .auth-play .auth-main .auth-login .register-form .user-input-wrp .inputText:not([value=""]) ~ .floating-label,
+.wrapper .auth .auth-play .auth-main .auth-login .register-form .user-input-wrp .inputText:focus ~ .floating-label {
+  top: -20px !important;
+  left: 8px;
+  font-size: 13px;
+  opacity: 1;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .id-input, .wrapper .auth .auth-play .auth-main .auth-login .register-form .id-input {
+  border: 2px solid #ff5b5b !important;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form #id-err, .wrapper .auth .auth-play .auth-main .auth-login .register-form #id-err {
+  font-size: 12px;
+  color: red;
+  margin-left: 10px;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form #id-messa, .wrapper .auth .auth-play .auth-main .auth-login .register-form #id-messa {
+  font-size: 12px;
+  color: #2a2a2a;
+  margin-left: 10px;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form #pass-err, .wrapper .auth .auth-play .auth-main .auth-login .register-form #pass-err {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 5px;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .passwarn, .wrapper .auth .auth-play .auth-main .auth-login .register-form .passwarn {
+  display: inline-block;
+  width: 30px;
+  height: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 10px;
+  border-radius: 20px;
+  background-color: #3cff87;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .passwarn:nth-child(1), .wrapper .auth .auth-play .auth-main .auth-login .register-form .passwarn:nth-child(1) {
+  margin-left: 10px !important;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .subflex, .wrapper .auth .auth-play .auth-main .auth-login .register-form .subflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .subflex .register-btn, .wrapper .auth .auth-play .auth-main .auth-login .register-form .subflex .register-btn {
+  border-radius: 4px;
+  padding: 13px 54px 15px;
+  background-color: #2ac6ff;
+  border: 1px solid #2ac6ff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  line-height: 19px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: white;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-transition: color 0.15s ease-in-out 0s;
+  transition: color 0.15s ease-in-out 0s;
+  display: inline-block;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .subflex .register-btn:hover, .wrapper .auth .auth-play .auth-main .auth-login .register-form .subflex .register-btn:hover {
+  color: #6dd8ff;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .subflex .logDirect, .wrapper .auth .auth-play .auth-main .auth-login .register-form .subflex .logDirect {
+  padding-right: 20px;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .subflex .logDirect p, .wrapper .auth .auth-play .auth-main .auth-login .register-form .subflex .logDirect p {
+  font-size: 0.8rem;
+}
+
+.wrapper .auth .auth-play .auth-main .auth-register .register-form .subflex .logDirect p a, .wrapper .auth .auth-play .auth-main .auth-login .register-form .subflex .logDirect p a {
+  color: #2550ff;
+  text-decoration: underline;
+}
+
+@media (max-width: 638px) {
+  .wrapper {
+    margin: 0 4%;
+  }
+  .wrapper .auth .auth-play .auth-main .auth-register, .wrapper .auth .auth-play .auth-main .auth-login {
+    width: 80%;
+  }
+  .auth-login {
+    margin-top: 30% !important;
+  }
+  .subflex {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .register-btn {
+    margin-bottom: 10px;
+  }
+  .inputText {
+    width: calc(100% - 13px) !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    margin: 0 40px;
+  }
+  .wrapper .auth .auth-play .auth-main .auth-register, .wrapper .auth .auth-play .auth-main .auth-login {
+    width: 90%;
+  }
+  .subflex {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
+.reg-hide {
+  display: none;
+}
+
+.log-hide {
+  display: none;
+}
+/*# sourceMappingURL=auth.css.map */
