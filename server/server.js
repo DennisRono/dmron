@@ -32,7 +32,11 @@ const authRoute = require('./routes/auth');
 //middlewares
 app.use(cors(options))
 app.use(morgan('combined'))
-app.use(bodyParser.json())
+app.use(
+    bodyParser.urlencoded({
+      extended: true,
+    })
+);
 
 
 app.use('/', homeRoute);

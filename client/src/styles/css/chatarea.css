@@ -1,7 +1,62 @@
 .chat-area {
-  width: 75%;
-  background-color: yellow;
-  height: 600px;
-  padding: 10px;
+  width: 100%;
+  position: relative;
+  overflow-y: scroll;
+  height: 100%;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+}
+
+.chat-area::-webkit-scrollbar {
+  width: 5px;
+  background-color: #171c2866;
+}
+
+.chat-area table {
+  width: 100%;
+}
+
+.chat-area table tr {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.chat-area table tr td .outgoing, .chat-area table tr td .incoming {
+  background-color: dodgerblue;
+  color: white;
+  font-family: roboto;
+  font-size: 0.8em;
+  width: 50%;
+  padding: 8px;
+  margin: 3px;
+  display: inline-block !important;
+}
+
+.chat-area table tr td .outgoing p, .chat-area table tr td .incoming p {
+  font-size: 1.0rem;
+}
+
+.chat-area table tr td .incoming {
+  margin-right: 10px;
+  border-radius: 20px 20px 20px 0px;
+}
+
+.chat-area table tr td .outgoing {
+  padding: 10px 20px;
+  margin-left: 120px;
+  border: 1px solid #aaa;
+  background-color: #fff !important;
+  color: dodgerblue;
+  border-radius: 20px 20px 0px 20px;
+  margin-top: 10px;
+  max-width: 600px;
+  float: right;
+}
+
+.clearer {
+  height: 1px;
+  overflow: hidden;
+  margin-top: -1px;
+  clear: both;
 }
 /*# sourceMappingURL=chatarea.css.map */
