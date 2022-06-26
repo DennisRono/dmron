@@ -1,8 +1,10 @@
 import login from './isLogged'
+import acchat from './activechat'
 import {combineReducers} from 'redux'
 
 const allreducers = combineReducers({
-    isLogged: login
+    logged: login,
+    active: acchat
 })
 
 export default allreducers;

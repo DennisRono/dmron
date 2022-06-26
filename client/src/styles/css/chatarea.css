@@ -2,26 +2,35 @@
   width: 100%;
   position: relative;
   overflow-y: scroll;
-  height: 100%;
+  height: 530px;
   padding: 10px 20px;
   scroll-behavior: smooth;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .chat-area::-webkit-scrollbar {
-  width: 5px;
-  background-color: #171c2866;
+  visibility: hidden;
 }
 
 .chat-area table {
   width: 100%;
 }
 
-.chat-area table tr {
+.chat-area table tbody tr {
   margin-bottom: 10px;
   width: 100%;
 }
 
-.chat-area table tr td .outgoing, .chat-area table tr td .incoming {
+.chat-area table tbody tr td .outgoing, .chat-area table tbody tr td .incoming {
   background-color: dodgerblue;
   color: white;
   font-family: roboto;
@@ -30,18 +39,25 @@
   padding: 8px;
   margin: 3px;
   display: inline-block !important;
+  position: relative;
 }
 
-.chat-area table tr td .outgoing p, .chat-area table tr td .incoming p {
+.chat-area table tbody tr td .outgoing p, .chat-area table tbody tr td .incoming p {
   font-size: 1.0rem;
 }
 
-.chat-area table tr td .incoming {
+.chat-area table tbody tr td .outgoing .time, .chat-area table tbody tr td .incoming .time {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.chat-area table tbody tr td .incoming {
   margin-right: 10px;
   border-radius: 20px 20px 20px 0px;
 }
 
-.chat-area table tr td .outgoing {
+.chat-area table tbody tr td .outgoing {
   padding: 10px 20px;
   margin-left: 120px;
   border: 1px solid #aaa;

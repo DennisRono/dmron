@@ -120,7 +120,7 @@
   }
   
   /* Send Message */
-  #right .write-box {
+  #right .write-box .usermessageform {
     width: 100%;
     height: 60px;
     display: flex;
@@ -133,16 +133,16 @@
     display: flex;
   }
   
-  #right .write-box input {
+  #right .write-box .usermessageform input {
     width: 83%;
     height: 70%;
   }
   
-  #right .write-box svg {
+  #right .write-box .usermessageform svg {
     margin-right: 20px;
   }
   
-  #right .write-box div:last-child svg {
+  #right .write-box .usermessageform div:last-child svg {
     margin-left: 30;
   }
   
@@ -260,13 +260,25 @@
   }
   
   #left .contacts .contact .contents .acc .acc-l p {
-    margin-top: 4px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.4rem!important;
+    font-size: 13px;
+    max-height: 1.15rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-word;
+    cursor: pointer;
   }
   
   #left .contacts .contact .contents .acc .acc-r {
     align-self: flex-start;
     justify-self: flex-end;
     padding-right: 20px;
+    font-size: .7rem;
+    color: #33333393;
   }
   
   @media screen and (min-width: 769px) {

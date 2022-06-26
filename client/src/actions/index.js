@@ -1,5 +1,6 @@
-const login = () => {
+export const acChat = (chat) => {
     return {
-        type: 'LOGIN'
+        type: 'ACTIVE',
+        payload: chat
     }
 }

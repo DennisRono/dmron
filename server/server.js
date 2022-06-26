@@ -11,18 +11,23 @@ const cors = require('cors')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const conn = require('./db/conn')
-const currentTime = require('./middlewares/time')
 const options = require('./config/corsOptions')
+const chat = require('./data/messages.json')
+const message = require('./schemas/mongoose/messages')
 
 //connect to mongoDb
 conn()
 
+//socket connections
 io.on('connection', (socket) => {
     console.log('a user connected')
-    socket.on("time", (data) => {
-        const packet = JSON.parse(data);
+    socket.on('getchats', ()=>{
+        socket.emit('chats', chat)
     })
-    socket.emit("time", currentTime);
+    socket.on('chatmessage', async (msg)=>{
+        await message.create(msg)
+        socket.emit('message', msg)
+    })
 })
 
 //routes

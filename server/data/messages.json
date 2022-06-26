@@ -1,0 +1,40 @@
+{
+    "chats":[
+       {
+          "chat_id":"623754",
+          "title":"Steiner254",
+          "last_seen":"9:42am",
+          "outgoing_id":"12736123",
+          "incoming_id":"1645376245",
+          "messages":[
+             {
+                "state":"incoming",
+                "mess_id":"2656723",
+                "message":"hello this is a sample test message",
+                "time":"7:42am"
+             },
+             {
+                "state":"outgoing",
+                "mess_id":"265672343",
+                "message":"hello this is a sample test message2",
+                "time":"7:42am"
+             }
+          ]
+       },
+       {
+          "chat_id":"6223454",
+          "title":"Dennis Kibet",
+          "last_seen":"7:42am",
+          "outgoing_id":"12736123",
+          "incoming_id":"1645376245",
+          "messages":[
+             {
+                "state":"incoming",
+                "mess_id":"223456723",
+                "message":"hello this is a another longer version of the sample test message",
+                "time":"6:32am"
+             }
+          ]
+       }
+    ]
+ }
